@@ -1,0 +1,20 @@
+# Official sources: peraturan.go.id (Kemenkumham). Laws and regulations are not
+# subject to copyright in Indonesia (UU 28/2014 Pasal 42).
+documents:
+  - id: pp35-2021
+    title: "PP 35/2021 tentang PKWT, Alih Daya, Waktu Kerja dan Waktu Istirahat, dan PHK"
+    body: {url: "https://peraturan.go.id/files/pp35-2021bt.pdf", sha256: f524a5783535c6c575848b18235080d62d85b215cb15c824d477dec70003fd7d}
+    explanation: {url: "https://peraturan.go.id/files/pp35-2021pjl.pdf", sha256: 6d1e0238eb8df46b68d1ba18bb8c895946e579d533205db3cdc403e2d016c8cb}
+  - id: pp36-2021
+    title: "PP 36/2021 tentang Pengupahan"
+    body: {url: "https://peraturan.go.id/files/pp36-2021bt.pdf", sha256: 1b28e8963588041acd4de87cb34ffee798dda7dbd142829b113012951e681c40}
+    explanation: {url: "https://peraturan.go.id/files/pp36-2021pjl.pdf", sha256: cc07cc0677ec32e3c5cbcd91cce5b40ead80b025907739b75fa878ee10f70edc}
+    amended_by: [pp51-2023, pp49-2025]
+  - id: pp51-2023
+    title: "PP 51/2023 tentang Perubahan atas PP 36/2021"
+    amends: pp36-2021
+    body: {url: "https://peraturan.go.id/files/pp-no-51-tahun-2023.pdf", sha256: 44de8376b488f4cf0f910660c05ac6e6044282b4c7c23b4e0e0b0e0881d349b8}
+  - id: pp49-2025
+    title: "PP 49/2025 tentang Perubahan Kedua atas PP 36/2021"
+    amends: pp36-2021
+    body: {url: "https://peraturan.go.id/files/pp-no-49-tahun-2025.pdf", sha256: cf928c61bd9dfe3e13c6965482ad1a437b4b543a5c48fe0c1b70032f75d9abd8}

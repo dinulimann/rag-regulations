@@ -1,0 +1,37 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tanya Peraturan Ketenagakerjaan</title>
+<style>
+:root{--bg:#f7f8fa;--card:#fff;--ink:#1d2430;--muted:#5f6b7a;--line:#e3e7ed;--accent:#0f6e8c;--warn:#a15c00}
+@media (prefers-color-scheme:dark){:root{--bg:#11161d;--card:#1a212b;--ink:#e6ebf1;--muted:#9aa6b4;--line:#2a3340;--accent:#4fb3d1;--warn:#f0b35a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,sans-serif}
+main{max-width:820px;margin:0 auto;padding:24px 16px 60px}h1{font-size:22px;margin:0 0 4px}.sub{color:var(--muted);font-size:13px;margin-bottom:18px}
+form{display:flex;gap:8px}input{flex:1;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font-size:15px}
+button{padding:12px 18px;border:0;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}button:disabled{opacity:.5}
+.ex{margin:10px 0 20px;display:flex;flex-wrap:wrap;gap:6px}.ex span{font-size:13px;border:1px solid var(--line);border-radius:20px;padding:3px 10px;cursor:pointer;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+.q{font-weight:600;margin-bottom:8px}.a{white-space:pre-wrap}.nf{color:var(--warn)}.meta{color:var(--muted);font-size:12px;margin-top:8px}
+details{border-top:1px solid var(--line);margin-top:10px;padding-top:8px}summary{cursor:pointer;font-size:14px}
+.src{font-size:13px;margin:8px 0;padding:8px 10px;border-left:3px solid var(--line)}.src.cited{border-color:var(--accent)}
+.badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:8px;background:rgba(15,110,140,.12);color:var(--accent);margin-left:6px}
+</style></head><body><main>
+<h1>Tanya Peraturan Ketenagakerjaan</h1>
+<div class="sub">PP 35/2021 dan PP 36/2021 (sebagaimana diubah PP 51/2023 dan PP 49/2025). Jawaban dari AI lokal dengan rujukan pasal. Informasi, bukan nasihat hukum.</div>
+<form id="f"><input id="q" placeholder="Contoh: Berapa lama maksimal PKWT?" autocomplete="off"><button id="b">Tanya</button></form>
+<div class="ex"><span>Berapa batas maksimal waktu kerja lembur?</span><span>Kapan THR wajib dibayarkan?</span><span>Who sets the minimum wage for Nusantara?</span><span>Berapa hari cuti tahunan?</span></div>
+<div id="out"></div></main>
+<script>
+const f=document.getElementById('f'),q=document.getElementById('q'),b=document.getElementById('b'),out=document.getElementById('out');
+document.querySelectorAll('.ex span').forEach(s=>s.onclick=()=>{q.value=s.textContent;f.requestSubmit()});
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+f.onsubmit=async e=>{e.preventDefault();if(!q.value.trim())return;b.disabled=true;b.textContent='Mencari…';
+ const card=document.createElement('div');card.className='card';card.innerHTML=`<div class="q">${esc(q.value)}</div><div class="meta">Membaca pasal-pasal terkait…</div>`;out.prepend(card);
+ try{const r=await fetch('/api/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q.value})});
+  if(!r.ok)throw new Error((await r.json()).detail||r.status);const d=await r.json();
+  const srcs=d.sources.map(s=>{const h=(Array.isArray(s.history)?s.history:JSON.parse(s.history||'[]'));
+   return `<div class="src ${d.citations.includes(s.label)?'cited':''}"><b>${esc(s.label)}</b>${h.map(x=>`<span class="badge">${esc(x)}</span>`).join('')}<div class="meta">${esc(s.context)}</div>${esc(s.text)}</div>`}).join('');
+  card.innerHTML=`<div class="q">${esc(d.question)}</div><div class="a ${d.found?'':'nf'}">${esc(d.answer)}</div>
+   <div class="meta">${d.found?'Rujukan: '+(d.citations.join(', ')||'–'):'Tidak ditemukan di peraturan ini'} · ${d.seconds} dtk · ${esc(d.model)}</div>
+   <details><summary>Pasal yang dibaca (${d.sources.length})</summary>${srcs}</details>`;
+ }catch(err){card.innerHTML+=`<div class="nf">Gagal: ${esc(err.message)}</div>`}
+ b.disabled=false;b.textContent='Tanya';q.value=''};
+</script></body></html>

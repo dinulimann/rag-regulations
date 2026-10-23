@@ -1,0 +1,32 @@
+# Hand-written from the article texts. expect: articles that answer it; facts: every group must
+# appear in the answer (any one spelling per group). answerable: false = not in these regulations.
+- {q: "Berapa lama maksimal jangka waktu PKWT?", expect: ["PP 35/2021 Pasal 8"], facts: [["5", "lima"]]}
+- {q: "Apakah PKWT boleh mensyaratkan masa percobaan kerja?", expect: ["PP 35/2021 Pasal 12"], facts: [["tidak", "batal demi hukum"]]}
+- {q: "Berapa uang kompensasi untuk PKWT selama 12 bulan terus menerus?", expect: ["PP 35/2021 Pasal 16"], facts: [["1 (satu) bulan", "satu bulan", "1 bulan"]]}
+- {q: "Berapa masa kerja minimal agar pekerja PKWT berhak atas uang kompensasi?", expect: ["PP 35/2021 Pasal 15"], facts: [["1 (satu) bulan", "satu bulan", "1 bulan"]]}
+- {q: "Berapa jam kerja per hari untuk perusahaan dengan 5 hari kerja seminggu?", expect: ["PP 35/2021 Pasal 21"], facts: [["8", "delapan"]]}   # 2026-10-23: dropped "40": the question asks per day only
+- {q: "Berapa batas maksimal waktu kerja lembur?", expect: ["PP 35/2021 Pasal 26"], facts: [["4", "empat"], ["18", "delapan belas"]]}
+- {q: "Berapa upah lembur untuk jam lembur pertama?", expect: ["PP 35/2021 Pasal 31"], facts: [["1,5", "1.5", "satu koma lima"]]}
+- {q: "Berapa upah untuk jam lembur kedua dan seterusnya?", expect: ["PP 35/2021 Pasal 31"], facts: [["2", "dua"]]}
+- {q: "Berapa istirahat mingguan bagi pekerja dengan 5 hari kerja?", expect: ["PP 35/2021 Pasal 22"], facts: [["2", "dua"]]}
+- {q: "Berapa uang pesangon untuk masa kerja 3 tahun lebih tetapi kurang dari 4 tahun?", expect: ["PP 35/2021 Pasal 40"], facts: [["4", "empat"]]}
+- {q: "Berapa uang penghargaan masa kerja untuk masa kerja 3 sampai kurang dari 6 tahun?", expect: ["PP 35/2021 Pasal 40"], facts: [["2", "dua"]]}
+- {q: "Hubungan kerja di perusahaan alih daya didasarkan pada perjanjian apa?", expect: ["PP 35/2021 Pasal 18"], facts: [["PKWT"], ["PKWTT"]]}
+- {q: "Berapa persen minimal upah pokok dari jumlah upah pokok dan tunjangan tetap?", expect: ["PP 36/2021 Pasal 7"], facts: [["75"]]}
+- {q: "Kapan paling lambat THR keagamaan wajib dibayarkan?", expect: ["PP 36/2021 Pasal 9"], facts: [["7", "tujuh"]]}
+- {q: "Berapa denda jika pengusaha terlambat membayar THR?", expect: ["PP 36/2021 Pasal 62"], facts: [["5%", "5 %", "lima persen"]]}
+- {q: "Berapa denda keterlambatan upah mulai hari keempat?", expect: ["PP 36/2021 Pasal 61"], facts: [["5%", "5 %", "lima persen"]]}
+- {q: "Berapa lama jangka waktu pembayaran upah paling lama?", expect: ["PP 36/2021 Pasal 55"], facts: [["1 (satu) bulan", "satu bulan", "1 bulan"]]}
+- {q: "Siapa yang wajib menetapkan upah minimum provinsi?", expect: ["PP 36/2021 Pasal 27"], facts: [["Gubernur"]]}
+- {q: "Siapa yang menetapkan upah minimum Ibu Kota Nusantara?", expect: ["PP 36/2021 Pasal 81A"], facts: [["Kepala Otorita"]]}
+- {q: "Apakah gubernur wajib menetapkan upah minimum sektoral provinsi?", expect: ["PP 36/2021 Pasal 35A"], facts: [["wajib", "ya"]]}
+- {q: "What is the maximum duration of a fixed-term employment contract (PKWT)?", expect: ["PP 35/2021 Pasal 8"], facts: [["5", "five"]]}
+- {q: "How many hours of overtime are allowed per week?", expect: ["PP 35/2021 Pasal 26"], facts: [["18", "eighteen"]]}
+- {q: "What is the late payment penalty for wages from the fourth day?", expect: ["PP 36/2021 Pasal 61"], facts: [["5%", "5 %", "five percent"]]}
+- {q: "Who sets the minimum wage for the new capital city Nusantara?", expect: ["PP 36/2021 Pasal 81A"], facts: [["Head of the", "Kepala Otorita", "Authority"]]}
+- {q: "Must employers prepare a wage structure and scale?", expect: ["PP 36/2021 Pasal 21"], facts: [["must", "obliged", "required", "wajib"]]}
+- {q: "Berapa hari cuti tahunan yang berhak didapat pekerja?", answerable: false}
+- {q: "Berapa lama cuti melahirkan bagi pekerja perempuan?", answerable: false}
+- {q: "Berapa persen iuran BPJS Kesehatan yang ditanggung pekerja?", answerable: false}
+- {q: "What is the income tax (PPh 21) rate for employees?", answerable: false}
+- {q: "Berapa nilai upah minimum provinsi DKI Jakarta tahun 2026?", answerable: false}

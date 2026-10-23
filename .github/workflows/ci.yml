@@ -1,0 +1,27 @@
+name: ci
+on: [push, pull_request]
+
+jobs:
+  tests-and-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13", cache: pip}
+      - run: sudo apt-get install -y poppler-utils
+      - run: pip install -r requirements.txt
+      - run: pytest -v
+      - name: Download the six official PDFs (checksums verified) and rebuild the corpus
+        run: python -m rag.corpus
+      - name: The corpus is unchanged by the build
+        run: |
+          python - <<'PY'
+          import json
+          cs = [json.loads(l) for l in open("data/corpus.jsonl")]
+          arts = {(c["doc"], c["pasal"]) for c in cs}
+          print(len(cs), "chunks,", len(arts), "articles")
+          assert len(cs) == 183 and len(arts) == 172, "parsing or consolidation changed"
+          assert ("PP 36/2021", "26A") not in arts            # inserted by PP 51/2023, deleted by PP 49/2025
+          assert ("PP 36/2021", "35J") in arts and ("PP 36/2021", "81A") in arts
+          PY
+          git diff --exit-code -- data/corpus.jsonl

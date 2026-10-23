@@ -1,0 +1,419 @@
+{
+  "summary": {
+    "model": "qwen2.5:7b",
+    "embedding": "bge-m3",
+    "questions": 30,
+    "retrieval": "25/25",
+    "cited": "21/25",
+    "facts": "23/25",
+    "refused_out_of_scope": "4/5",
+    "wrongly_refused": 0,
+    "unsupported_citations": 4,
+    "avg_seconds": 54.9,
+    "date": "2026-10-23"
+  },
+  "rows": [
+    {
+      "q": "Berapa lama maksimal jangka waktu PKWT?",
+      "answerable": true,
+      "found": true,
+      "answer": "PKWT berdasarkan jangka waktu dapat dibuat untuk paling lama 5 (lima) tahun [PP 35/2021 Pasal 8(1)].",
+      "citations": [
+        "PP 35/2021 Pasal 8"
+      ],
+      "unsupported": [],
+      "seconds": 93.5,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Apakah PKWT boleh mensyaratkan masa percobaan kerja?",
+      "answerable": true,
+      "found": true,
+      "answer": "PKWT tidak dapat mensyaratkan adanya masa percobaan kerja. [PP 35/2021 Pasal 12(1)]",
+      "citations": [
+        "PP 35/2021 Pasal 12"
+      ],
+      "unsupported": [],
+      "seconds": 49.6,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa uang kompensasi untuk PKWT selama 12 bulan terus menerus?",
+      "answerable": true,
+      "found": true,
+      "answer": "[PP 35/2021 Pasal 16(1)a] Besaran uang kompensasi untuk PKWT selama 12 bulan terus menerus diberikan sebesar 1 bulan Upah.",
+      "citations": [
+        "PP 35/2021 Pasal 16"
+      ],
+      "unsupported": [],
+      "seconds": 52.5,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa masa kerja minimal agar pekerja PKWT berhak atas uang kompensasi?",
+      "answerable": true,
+      "found": true,
+      "answer": "Pekerja/Buruh yang telah mempunyai masa kerja paling sedikit 1 (satu) bulan secara terus menerus berhak atas uang kompensasi. [PP 35/2021 Pasal 3]",
+      "citations": [],
+      "unsupported": [
+        "PP 35/2021 Pasal 3"
+      ],
+      "seconds": 47.0,
+      "retrieved_ok": true,
+      "cited_ok": false,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa jam kerja per hari untuk perusahaan dengan 5 hari kerja seminggu?",
+      "answerable": true,
+      "found": true,
+      "answer": "[PP 35/2021 Pasal 21(2)b] Waktu kerja untuk perusahaan dengan 5 hari kerja seminggu adalah 8 (delapan) jam per hari.",
+      "citations": [
+        "PP 35/2021 Pasal 21"
+      ],
+      "unsupported": [],
+      "seconds": 42.2,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": false
+    },
+    {
+      "q": "Berapa batas maksimal waktu kerja lembur?",
+      "answerable": true,
+      "found": true,
+      "answer": "Batas maksimal waktu kerja lembur adalah 4 jam dalam 1 hari dan 18 jam dalam 1 minggu, sebagaimana dimaksud dalam [PP 35/2021 Pasal 26(1)].",
+      "citations": [
+        "PP 35/2021 Pasal 26"
+      ],
+      "unsupported": [],
+      "seconds": 51.8,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa upah lembur untuk jam lembur pertama?",
+      "answerable": true,
+      "found": true,
+      "answer": "Upah lembur untuk jam lembur pertama sebesar 1,5 (satu koma lima) kali Upah sejam. [PP 35/2021 Pasal 31(1)a]",
+      "citations": [
+        "PP 35/2021 Pasal 31"
+      ],
+      "unsupported": [],
+      "seconds": 57.4,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa upah untuk jam lembur kedua dan seterusnya?",
+      "answerable": true,
+      "found": true,
+      "answer": "Upah untuk jam lembur kedua dan seterusnya sebesar 2 (dua) kali Upah sejam. [PP 35/2021 Pasal 31(1)b]",
+      "citations": [
+        "PP 35/2021 Pasal 31"
+      ],
+      "unsupported": [],
+      "seconds": 40.8,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa istirahat mingguan bagi pekerja dengan 5 hari kerja?",
+      "answerable": true,
+      "found": true,
+      "answer": "Istirahat mingguan bagi pekerja dengan 5 hari kerja adalah 2 hari, sebagaimana dimaksud dalam [PP 35/2021 Pasal 22 a].",
+      "citations": [
+        "PP 35/2021 Pasal 22"
+      ],
+      "unsupported": [],
+      "seconds": 38.4,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa uang pesangon untuk masa kerja 3 tahun lebih tetapi kurang dari 4 tahun?",
+      "answerable": true,
+      "found": true,
+      "answer": "[PP 35/2021 Pasal 40(2)d] Uang pesangon untuk masa kerja 3 tahun atau lebih tetapi kurang dari 4 tahun sebesar 4 bulan Upah.",
+      "citations": [
+        "PP 35/2021 Pasal 40"
+      ],
+      "unsupported": [],
+      "seconds": 49.7,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa uang penghargaan masa kerja untuk masa kerja 3 sampai kurang dari 6 tahun?",
+      "answerable": true,
+      "found": true,
+      "answer": "[PP 35/2021 Pasal 40(3)a] Uang penghargaan masa kerja untuk masa kerja 3 (tiga) tahun atau lebih tetapi kurang dari 6 (enam) tahun adalah 2 (dua) bulan Upah.",
+      "citations": [
+        "PP 35/2021 Pasal 40"
+      ],
+      "unsupported": [],
+      "seconds": 68.7,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Hubungan kerja di perusahaan alih daya didasarkan pada perjanjian apa?",
+      "answerable": true,
+      "found": true,
+      "answer": "Hubungan kerja di perusahaan alih daya didasarkan pada Perjanjian Kerja Tempat Kerja (PKWT) atau Perjanjian Kerja Tempat Kerja Tetap (PKWTT) [PP 35/2021 Pasal 18(1)].",
+      "citations": [
+        "PP 35/2021 Pasal 18"
+      ],
+      "unsupported": [],
+      "seconds": 57.0,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa persen minimal upah pokok dari jumlah upah pokok dan tunjangan tetap?",
+      "answerable": true,
+      "found": true,
+      "answer": "[PP 36/2021 Pasal 2(2)]",
+      "citations": [],
+      "unsupported": [
+        "PP 36/2021 Pasal 2"
+      ],
+      "seconds": 67.4,
+      "retrieved_ok": true,
+      "cited_ok": false,
+      "facts_ok": false
+    },
+    {
+      "q": "Kapan paling lambat THR keagamaan wajib dibayarkan?",
+      "answerable": true,
+      "found": true,
+      "answer": "Paling lambat THR keagamaan wajib dibayarkan 7 (tujuh) hari sebelum hari raya keagamaan [PP 36/2021 Pasal 9(2)].",
+      "citations": [
+        "PP 36/2021 Pasal 9"
+      ],
+      "unsupported": [],
+      "seconds": 38.0,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa denda jika pengusaha terlambat membayar THR?",
+      "answerable": true,
+      "found": true,
+      "answer": "[PP 36/2021 Pasal 62] Pengusaha yang terlambat membayar tunjangan hari raya keagamaan kepada Pekerja/Buruh dikenai denda sebesar 5% (lima persen) dari total tunjangan hari raya keagamaan yang harus dibayar sejak berakhirnya batas waktu kewajiban Pengusaha untuk membayar.",
+      "citations": [
+        "PP 36/2021 Pasal 62"
+      ],
+      "unsupported": [],
+      "seconds": 90.2,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa denda keterlambatan upah mulai hari keempat?",
+      "answerable": true,
+      "found": true,
+      "answer": "[PP 36/2021 Pasal 61(1)a] Denda keterlambatan upah mulai hari keempat sebesar 5% (lima persen) untuk setiap hari keterlambatan dari upah yang seharusnya dibayarkan.",
+      "citations": [
+        "PP 36/2021 Pasal 61"
+      ],
+      "unsupported": [],
+      "seconds": 55.9,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa lama jangka waktu pembayaran upah paling lama?",
+      "answerable": true,
+      "found": true,
+      "answer": "Jangka waktu pembayaran upah oleh Pengusaha tidak boleh lebih dari 1 (satu) bulan [PP 36/2021 Pasal 5(3)].",
+      "citations": [],
+      "unsupported": [
+        "PP 36/2021 Pasal 5"
+      ],
+      "seconds": 71.4,
+      "retrieved_ok": true,
+      "cited_ok": false,
+      "facts_ok": true
+    },
+    {
+      "q": "Siapa yang wajib menetapkan upah minimum provinsi?",
+      "answerable": true,
+      "found": true,
+      "answer": "Gubernur wajib menetapkan upah minimum provinsi [PP 36/2021 Pasal 27(1)].",
+      "citations": [
+        "PP 36/2021 Pasal 27"
+      ],
+      "unsupported": [],
+      "seconds": 37.4,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Siapa yang menetapkan upah minimum Ibu Kota Nusantara?",
+      "answerable": true,
+      "found": true,
+      "answer": "Upah minimum Ibu Kota Nusantara ditetapkan oleh Kepala Otorita Ibu Kota Nusantara [PP 36/2021 Pasal 81A].",
+      "citations": [
+        "PP 36/2021 Pasal 81A"
+      ],
+      "unsupported": [],
+      "seconds": 54.5,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Apakah gubernur wajib menetapkan upah minimum sektoral provinsi?",
+      "answerable": true,
+      "found": true,
+      "answer": "Ya, gubernur wajib menetapkan Upah minimum sektoral provinsi. Hal ini disebutkan dalam [PP 36/2021 Pasal 35A].",
+      "citations": [
+        "PP 36/2021 Pasal 35A"
+      ],
+      "unsupported": [],
+      "seconds": 51.1,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "What is the maximum duration of a fixed-term employment contract (PKWT)?",
+      "answerable": true,
+      "found": true,
+      "answer": "The maximum duration of a fixed-term employment contract (PKWT) is 5 years. This can be extended if the work has not been completed when the initial term ends, but the total duration including extensions cannot exceed 5 years. [PP 35/2021 Pasal 8(1) dan (2)]",
+      "citations": [
+        "PP 35/2021 Pasal 8"
+      ],
+      "unsupported": [],
+      "seconds": 60.7,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "How many hours of overtime are allowed per week?",
+      "answerable": true,
+      "found": true,
+      "answer": "[PP 35/2021 Pasal 26(1)] Four (4) hours of overtime are allowed per day and 18 (eighteen) hours per week.",
+      "citations": [
+        "PP 35/2021 Pasal 26"
+      ],
+      "unsupported": [],
+      "seconds": 50.7,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "What is the late payment penalty for wages from the fourth day?",
+      "answerable": true,
+      "found": true,
+      "answer": "The late payment penalty for wages from the fourth day is 5% (five percent) of the wage for each day of delay, starting from the fourth day up to the eighth day. [PP 36/2021 Pasal 61(1)a]",
+      "citations": [
+        "PP 36/2021 Pasal 61"
+      ],
+      "unsupported": [],
+      "seconds": 30.6,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Who sets the minimum wage for the new capital city Nusantara?",
+      "answerable": true,
+      "found": true,
+      "answer": "The minimum wage for the new capital city Nusantara is set by the Head of the Nusantara Capital Authority. [PP 36/2021 Pasal 81A]",
+      "citations": [
+        "PP 36/2021 Pasal 81A"
+      ],
+      "unsupported": [],
+      "seconds": 49.7,
+      "retrieved_ok": true,
+      "cited_ok": true,
+      "facts_ok": true
+    },
+    {
+      "q": "Must employers prepare a wage structure and scale?",
+      "answerable": true,
+      "found": true,
+      "answer": "Yes, employers must prepare a wage structure and scale. According to [PP 36/2025 Pasal 21(1)], employers are required to prepare and implement a wage structure and scale in the company, considering the company's capacity, productivity, as well as the category, position, working hours, education, and competence.",
+      "citations": [],
+      "unsupported": [
+        "PP 36/2025 Pasal 21"
+      ],
+      "seconds": 54.6,
+      "retrieved_ok": true,
+      "cited_ok": false,
+      "facts_ok": true
+    },
+    {
+      "q": "Berapa hari cuti tahunan yang berhak didapat pekerja?",
+      "answerable": false,
+      "found": false,
+      "answer": "Jawaban tidak ditemukan dalam peraturan yang diberikan.",
+      "citations": [],
+      "unsupported": [],
+      "seconds": 45.5,
+      "refused_ok": true
+    },
+    {
+      "q": "Berapa lama cuti melahirkan bagi pekerja perempuan?",
+      "answerable": false,
+      "found": true,
+      "answer": "Cuti melahirkan bagi pekerja perempuan sepanjang 2 (dua) hari, sebagaimana dimaksud dalam [PP 36/2021 Pasal 40(2)].",
+      "citations": [
+        "PP 36/2021 Pasal 40"
+      ],
+      "unsupported": [],
+      "seconds": 56.4,
+      "refused_ok": false
+    },
+    {
+      "q": "Berapa persen iuran BPJS Kesehatan yang ditanggung pekerja?",
+      "answerable": false,
+      "found": false,
+      "answer": "Jawaban tidak ditemukan dalam peraturan yang diberikan.",
+      "citations": [],
+      "unsupported": [],
+      "seconds": 64.2,
+      "refused_ok": true
+    },
+    {
+      "q": "What is the income tax (PPh 21) rate for employees?",
+      "answerable": false,
+      "found": false,
+      "answer": "The answer is not in these regulations.",
+      "citations": [],
+      "unsupported": [],
+      "seconds": 64.7,
+      "refused_ok": true
+    },
+    {
+      "q": "Berapa nilai upah minimum provinsi DKI Jakarta tahun 2026?",
+      "answerable": false,
+      "found": false,
+      "answer": "Jawaban tidak ditemukan dalam peraturan yang diberikan.",
+      "citations": [],
+      "unsupported": [],
+      "seconds": 54.8,
+      "refused_ok": true
+    }
+  ]
+}
