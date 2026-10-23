@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.13", cache: pip}
-      - run: sudo apt-get install -y poppler-utils
+      - run: sudo apt-get update -q && sudo apt-get install -y poppler-utils
       - run: pip install -r requirements.txt
       - run: pytest -v
       - name: Download the six official PDFs (checksums verified) and rebuild the corpus
