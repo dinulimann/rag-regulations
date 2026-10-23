@@ -50,7 +50,7 @@ scans everywhere, so the parser repairs them:
 - page furniture: running headers, page numbers, and "continued on next page" lines;
 - a short list of words the OCR misreads, found by reading the output.
 
-The CI downloads all six PDFs, verifies their SHA-256 and checks that the parsed corpus is unchanged.
+The six PDFs are kept in `data/raw/` (peraturan.go.id timed out from GitHub's servers), and `sources.yml` records each one's source URL and SHA-256. The CI checks the checksums, rebuilds the corpus, and fails if any article changed.
 
 ### 2. Amendments: answering from the version in force
 An amending regulation doesn't repeat the law. It lists changes: "Ketentuan Pasal 27 diubah sehingga berbunyi…", "Di antara Pasal 35
@@ -94,7 +94,7 @@ top 6 + rules ─► qwen2.5:7b ─► answer with [S1] tags ─► tags → art
 python -m venv .venv && .venv/bin/pip install -r requirements.txt     # also needs poppler (pdftotext)
 ollama pull bge-m3 && ollama pull qwen2.5:7b
 docker compose up -d --wait                                            # PostgreSQL + pgvector on :5562
-.venv/bin/python -m rag.corpus                                         # download (checksums), parse, consolidate → data/corpus.jsonl
+.venv/bin/python -m rag.corpus                                         # check checksums (downloads if missing), parse, consolidate
 .venv/bin/python -c "from pathlib import Path; from rag import store; store.index(Path('data/corpus.jsonl'))"
 .venv/bin/uvicorn rag.api:app --port 8000                              # http://localhost:8000
 .venv/bin/python -m eval.run                                           # eval/results.md

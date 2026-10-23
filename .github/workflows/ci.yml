@@ -11,7 +11,7 @@ jobs:
       - run: sudo apt-get update -q && sudo apt-get install -y poppler-utils
       - run: pip install -r requirements.txt
       - run: pytest -v
-      - name: Download the six official PDFs (checksums verified) and rebuild the corpus
+      - name: Rebuild the corpus from the six official PDFs (checksums verified)
         run: python -m rag.corpus
       - name: The corpus is unchanged by the build
         run: |
